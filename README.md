@@ -1,47 +1,62 @@
-![HenryLogo](https://d31uz8lwfmyn8g.cloudfront.net/Assets/logo-henry-white-lg.png)
+# ETL Project - Initial load and update - Data Normalization
 
+En este proyecto normalizaremos los datos obtenidos, buscando valores nulos, valores atípicos, considerando valores remotos y analizando que hacer con cada uno de ellos. Todas estas transformaciones deben hacerse de forma automática, ya que los datos que tenemos del proyecto son solo el principio de una lista de actualizaciones que se llevarán a cabo.<br>
 
+<br>
 
-# Trabajo Práctico Individual N°1 - Normalización de Datos
+En el archivo Informe.ipynb realizo una exploración detallada y explicada paso a paso para realizar la transformación de los datos.<br>
 
-<p> Una empresa de ventas de productos al público tomo la decision de ser una empresa Data-driven, concepto en el cual los datos son fundamentales a la hora de tomar decisiones.</p> 
+En este gráfico analizamos la cantidad de valores nulos de cada columna de las tablas, para analizar los porcentajes de estos valores y así poder decidir qué hacer con estos resultados.<br>
 
-En principio, la gerencia decidió crear una base de datos, teniendo en cuenta las principales entidades que son las ventas, compras y gastos.
-Este proceso deberá ser documentado teniendo en cuenta la estructura de las tablas y un diccionario de datos.<br>
-Partiendo del trabajo anterior se deberá analizar su calidad con los datos originales, pudiendo asi encontrar valores faltantes, datos incorrectos y outliers.
-Antes de proceder con esta limpieza, la genrencia solicito un informe ejecutivo que contenga todas las incongruencias de los datos o la mala calidad de los mismos. Luego, se puede proceder a corregirlos o desestimarlos.
-Este diagnostico de datos es muy importante y necesario para que el proyecto sea un exito, para ello hay que dedicarle tiempo y analisis para hacerlo bien
+![image](output2.png)<br>
 
-Algunos ejemplos de como podrían ser los reportes de calidad del datos son los siguientes
+<br>
 
-![image](https://user-images.githubusercontent.com/105241620/174602029-3c600b4a-1067-4b7d-a376-b0e0bd140b5d.png)<br>
-![image](https://user-images.githubusercontent.com/105241620/174602143-cc30a557-110f-487a-8272-f7ad94dcbe27.png)<br>
-![image](https://user-images.githubusercontent.com/105241620/174602248-37db7f80-8e95-4c24-91c8-55081284bc20.png)<br>
-![image](https://user-images.githubusercontent.com/105241620/174602278-b162f15d-e626-4dae-91ee-41224f4173f8.png)<br>
-![image](https://user-images.githubusercontent.com/105241620/174602296-a7943be5-cd11-44e2-826e-a33563395a89.png)<br>
+Por ejemplo, en el siguiente gráfico muestro la distribución de las Cantidades y Precios de las Compras realizadas por la empresa, considerando los valores atípicos en la parte inferior y no considerándolos en la parte superior.<br>
 
+![image](output.png)<br>
 
+<br>
 
+Al final del análisis hacemos (en base a un KPI) una recomendación para la empresa sobre dónde es más óptimo abrir una nueva sucursal. Para ello realizamos un análisis de los ingresos totales por sucursal, con y sin valores remotos. De esta forma llegamos a dos conclusiones para aportar a los responsables de tomar la decisión. <br>
 
-Si bien el negocio considera primordial entender cuál es la evolucion de las ventas, compras y gastos, desde el area de DATOS se pensó que se podría ofrecer una serie de KPIs utiles para ayudar en la toma de decisiones.
+![image](output3.png)<br>
+![image](output4.png)<br>
 
-Ademas de todo esto, el area encargada de la apertura de nuevas sucursales necesita encontrar, a partir de la sugerencia del area de DATOS, un lugar para establecer una nueva sucursal.<br>
-Se contará con una tabla de localidades de la cual será necesario analizar la calidad de los datos y se deberá normalizar la informacion de dicha tabla.
-Recuerden que hay un algoritmo para hacer una comparacion de palabras que podria ayudar con esta tarea, ya que esta tarea tiene que ser 100% automatica y sin invervencion de nadie<br>
+<br>
 
+En el proyecto tenemos 2 archivos importantes Create.py que es el programa que se realizo para la creacion de los datasets normalizados, la creacion de un csv de registro que anotara las actualizaciones de los datos que se realizaran. El segundo archivo es el Update.py que tomara los dataset de Ventas y Clientes de la carpeta Datasets y realizara la actualizacion de los datos correspondientes.<br>
 
-Se cuenta con los siguientes datasets: 
+<br>
 
-Clientes.csv <br>
-Compra.csv<br>
-Gasto.csv<br>
-Localidades.csv<br>
-Proveedores.csv<br>
-Sucursales.csv<br>
-Venta.csv<br>
+# Proyecto ETL - Carga inicial y actualizacion - Normalización de Datos
 
-Es necesario tener en cuenta que hay otro dataset de clientes (Clientes_2.csv) y no se descarta que puedan aparecer otros. Por eso, se deberá contemplar que el proceso incluya mas dataset de clientes y que no haya duplicados. Esto deberia ser automatico, es fundamental pensar en algo robusto para no tener problemas a futuro.<br>
+In this project we will normalize the data obtained, looking for null values, atypical values, considering remote values ​​and analyzing what to do with each of them. All these transformations must be done automatically, since the data we have from the project is only the beginning of a list of updates that will be carried out. <br>
 
-Por ultimo, recuerden que los reportes que se desarrollarán serán para la toma de decisiones ejecutivas ( Directores, vicepresidente y/o presidente de la empresa, etc), por lo tanto es imperativo evitar errores en los mismos. <br>
+<br>
 
+In the Informe.ipynb file I make a detailed exploration and explained step by step to carry out the transformation of the data. <br>
+
+In this graph we analyze the amount of null values ​​of each column of the tables, to analyze the percentages of these values ​​and thus be able to decide what to do with these results.<br>
+
+![image](output2.png)<br>
+
+<br>
+
+For example, in the graph below I show the distribution of the Quantities and Prices of Purchases made by the company, considering the outliers at the bottom and not considering them at the top.<br>
+
+![image](output.png)<br>
+
+<br>
+
+At the end of the analysis we make (based on a KPI) a recommendation for the company on where it is more optimal to open a new branch. For that we carry out an analysis of the total income by branch, with and without remote values. In this way we reach two conclusions to contribute to those responsible for making the decision. <br>
+
+![image](output3.png)<br>
+![image](output4.png)<br>
+
+<br>
+
+In the project we have 2 important files Create.py which is the program that was made for the creation of the normalized datasets, the creation of a registry csv that will record the data updates that will be made. The second file is Update.py which will take the Sales and Customer datasets from the Datasets folder and update the corresponding data.<br>
+
+<br>
 
