@@ -1,5 +1,37 @@
 # ETL Project - Initial load and update - Data Normalization
 
+In this project we will normalize the data obtained, looking for null values, atypical values, considering remote values ​​and analyzing what to do with each of them. All these transformations must be done automatically, since the data we have from the project is only the beginning of a list of updates that will be carried out. <br>
+
+<br>
+
+In the Informe.ipynb file I make a detailed exploration and explained step by step to carry out the transformation of the data. <br>
+
+In this graph we analyze the amount of null values ​​of each column of the tables, to analyze the percentages of these values ​​and thus be able to decide what to do with these results.<br>
+
+![image](output2.png)<br>
+
+<br>
+
+For example, in the graph below I show the distribution of the Quantities and Prices of Purchases made by the company, considering the outliers at the bottom and not considering them at the top.<br>
+
+![image](output.png)<br>
+
+<br>
+
+At the end of the analysis we make (based on a KPI) a recommendation for the company on where it is more optimal to open a new branch. For that we carry out an analysis of the total income by branch, with and without remote values. In this way we reach two conclusions to contribute to those responsible for making the decision. <br>
+
+![image](output3.png)<br>
+![image](output4.png)<br>
+
+<br>
+
+In the project we have 2 important files Create.py which is the program that was made for the creation of the normalized datasets, the creation of a registry csv that will record the data updates that will be made. The second file is Update.py which will take the Sales and Customer datasets from the Datasets folder and update the corresponding data.<br>
+
+<br>
+
+
+# Proyecto ETL - Carga inicial y actualizacion - Normalización de Datos
+
 En este proyecto normalizaremos los datos obtenidos, buscando valores nulos, valores atípicos, considerando valores remotos y analizando que hacer con cada uno de ellos. Todas estas transformaciones deben hacerse de forma automática, ya que los datos que tenemos del proyecto son solo el principio de una lista de actualizaciones que se llevarán a cabo.<br>
 
 <br>
@@ -29,34 +61,4 @@ En el proyecto tenemos 2 archivos importantes Create.py que es el programa que s
 
 <br>
 
-# Proyecto ETL - Carga inicial y actualizacion - Normalización de Datos
-
-In this project we will normalize the data obtained, looking for null values, atypical values, considering remote values ​​and analyzing what to do with each of them. All these transformations must be done automatically, since the data we have from the project is only the beginning of a list of updates that will be carried out. <br>
-
-<br>
-
-In the Informe.ipynb file I make a detailed exploration and explained step by step to carry out the transformation of the data. <br>
-
-In this graph we analyze the amount of null values ​​of each column of the tables, to analyze the percentages of these values ​​and thus be able to decide what to do with these results.<br>
-
-![image](output2.png)<br>
-
-<br>
-
-For example, in the graph below I show the distribution of the Quantities and Prices of Purchases made by the company, considering the outliers at the bottom and not considering them at the top.<br>
-
-![image](output.png)<br>
-
-<br>
-
-At the end of the analysis we make (based on a KPI) a recommendation for the company on where it is more optimal to open a new branch. For that we carry out an analysis of the total income by branch, with and without remote values. In this way we reach two conclusions to contribute to those responsible for making the decision. <br>
-
-![image](output3.png)<br>
-![image](output4.png)<br>
-
-<br>
-
-In the project we have 2 important files Create.py which is the program that was made for the creation of the normalized datasets, the creation of a registry csv that will record the data updates that will be made. The second file is Update.py which will take the Sales and Customer datasets from the Datasets folder and update the corresponding data.<br>
-
-<br>
 
