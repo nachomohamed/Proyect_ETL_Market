@@ -9,9 +9,9 @@ data.close()
 
 texto1="Cliente"
 texto2= "Venta"
-contenido = os.listdir('C:\\Users\\Nacho\\Downloads\\HENRY\\Proyecto 1\\DS-PI-ProyectoIndividual\\Datasets\\')
+contenido = os.listdir('Datasets\\')
 data= open("Datasets\\Data.csv","a")
-data2= pd.read_csv("C:\\Users\\Nacho\\Downloads\\HENRY\\Proyecto 1\\DS-PI-ProyectoIndividual\\Datasets\\Data.csv", sep=";")
+data2= pd.read_csv("Datasets\\Data.csv", sep=";")
 
 
 cargaC=0
@@ -23,7 +23,7 @@ for archivo in contenido:
         elif any(data2["Nombre_Archivo"]==archivo):
             pass
         else:
-            Cliente= pd.read_csv(f"C:\\Users\\Nacho\\Downloads\\HENRY\\Proyecto 1\\DS-PI-ProyectoIndividual\\Datasets\\{archivo}", on_bad_lines='skip', sep=";")
+            Cliente= pd.read_csv(f"Datasets\\{archivo}", on_bad_lines='skip', sep=";")
             Cliente=Cliente.drop("col10", axis=1)
             Cliente.columns=["ID","Provincia","Nombre_y_Apellido","Domicilio","Telefono","Edad","Localidad","Longitud","Latitud"]   
 
@@ -74,7 +74,7 @@ for archivo in contenido:
         elif any(data2["Nombre_Archivo"]==archivo):
             pass
         else:
-            Venta= pd.read_csv(f"C:\\Users\\Nacho\\Downloads\\HENRY\\Proyecto 1\\DS-PI-ProyectoIndividual\\Datasets\\{archivo}")
+            Venta= pd.read_csv(f"Datasets\\{archivo}")
             Venta.loc[Venta["Precio"].isna(),"Precio"]=0
             Venta.loc[Venta["Cantidad"].isna(),"Cantidad"]=1
             Venta.set_index("IdVenta", inplace=True)

@@ -25,12 +25,26 @@ At the end of the analysis we make (based on a KPI) a recommendation for the com
 
 <br>
 
-In the project we have 2 important files Create.py which is the program that was made for the creation of the normalized datasets, the creation of a registry csv that will record the data updates that will be made. The second file is Update.py which will take the Sales and Customer datasets from the Datasets folder and update the corresponding data.<br>
+## Incremental Load: 
+<br>
 
+In the project we have 2 important files Create.py which is the program that was made for the creation of the normalized datasets, the creation of a registry csv that will record the data updates that will be made. These data will be stored in two csv files called "Venta_Total.csv" and "Cliente_Total.csv".
+The second file is Update.py which will take the Sales and Customers dataset from the Datasets folder and will update the corresponding data in the csv "Venta_Total.csv" and "Cliente_Total.csv". In addition to updating the registry base of the "Data.csv" file. <br>
+<br>
+
+![image](output5.png)<br>
+<br>
+
+![image](output6.png)<br>
+<br>
+
+![image](output7.png)<br>
 <br>
 
 
 # Proyecto ETL - Carga inicial y actualizacion - Normalización de Datos
+
+<br>
 
 En este proyecto normalizaremos los datos obtenidos, buscando valores nulos, valores atípicos, considerando valores remotos y analizando que hacer con cada uno de ellos. Todas estas transformaciones deben hacerse de forma automática, ya que los datos que tenemos del proyecto son solo el principio de una lista de actualizaciones que se llevarán a cabo.<br>
 
@@ -57,8 +71,19 @@ Al final del análisis hacemos (en base a un KPI) una recomendación para la emp
 
 <br>
 
-En el proyecto tenemos 2 archivos importantes Create.py que es el programa que se realizo para la creacion de los datasets normalizados, la creacion de un csv de registro que anotara las actualizaciones de los datos que se realizaran. El segundo archivo es el Update.py que tomara los dataset de Ventas y Clientes de la carpeta Datasets y realizara la actualizacion de los datos correspondientes.<br>
-
+## Carga incremental: 
 <br>
 
+
+En el proyecto tenemos 2 archivos importantes Create.py que es el programa que se realizo para la creacion de los datasets normalizados, la creacion de un csv de registro que anotara las actualizaciones de los datos que se realizaran. Estos datos se guaradaran en dos archivos csv llamados "Venta_Total.csv" y "Cliente_Total.csv". 
+El segundo archivo es el Update.py que tomara los dataset de Ventas y Clientes de la carpeta Datasets y realizara la actualizacion de los datos correspondientes en los csv "Venta_Total.csv" y "Cliente_Total.csv". Ademas de actualizar la base de registros del archivo "Data.csv". <br>
+
+![image](output5.png)<br>
+<br>
+
+![image](output6.png)<br>
+<br>
+
+![image](output7.png)<br>
+<br>
 

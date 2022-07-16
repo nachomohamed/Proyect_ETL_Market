@@ -5,9 +5,9 @@ from datetime import datetime
 
 texto1="Cliente"
 texto2= "Venta"
-contenido = os.listdir('C:\\Users\\Nacho\\Downloads\\HENRY\\Proyecto 1\\DS-PI-ProyectoIndividual\\Datasets\\')
+contenido = os.listdir('Datasets\\')
 data= open("Datasets\\Data.csv","a")
-data2= pd.read_csv("C:\\Users\\Nacho\\Downloads\\HENRY\\Proyecto 1\\DS-PI-ProyectoIndividual\\Datasets\\Data.csv", sep=";")
+data2= pd.read_csv("Datasets\\Data.csv", sep=";")
 
 
 for archivo in contenido:
@@ -16,8 +16,8 @@ for archivo in contenido:
             if any(data2["Nombre_Archivo"]==archivo):
                 pass
             else:
-                Cliente_total= pd.read_csv("C:\\Users\\Nacho\\Downloads\\HENRY\\Proyecto 1\\DS-PI-ProyectoIndividual\\Datasets\\Cliente_Total.csv", on_bad_lines='skip', sep=";")
-                Cliente= pd.read_csv(f"C:\\Users\\Nacho\\Downloads\\HENRY\\Proyecto 1\\DS-PI-ProyectoIndividual\\Datasets\\{archivo}", on_bad_lines='skip', sep=";")
+                Cliente_total= pd.read_csv("Datasets\\Cliente_Total.csv", on_bad_lines='skip', sep=";")
+                Cliente= pd.read_csv(f"Datasets\\{archivo}", on_bad_lines='skip', sep=";")
                 
                 Cliente=Cliente.drop("col10", axis=1)
                 Cliente.columns=["ID","Provincia","Nombre_y_Apellido","Domicilio","Telefono","Edad","Localidad","Longitud","Latitud"]   
@@ -63,8 +63,8 @@ for archivo in contenido:
             if any(data2["Nombre_Archivo"]==archivo):
                 pass
             else:
-                Venta_Total= pd.read_csv(f"C:\\Users\\Nacho\\Downloads\\HENRY\\Proyecto 1\\DS-PI-ProyectoIndividual\\Datasets\\Venta_Total.csv", sep=",")
-                Venta= pd.read_csv(f"C:\\Users\\Nacho\\Downloads\\HENRY\\Proyecto 1\\DS-PI-ProyectoIndividual\\Datasets\\{archivo}",sep=",")
+                Venta_Total= pd.read_csv(f"Datasets\\Venta_Total.csv", sep=",")
+                Venta= pd.read_csv(f"Datasets\\{archivo}",sep=",")
                 Venta.loc[Venta["Precio"].isna(),"Precio"]=0
                 Venta.loc[Venta["Cantidad"].isna(),"Cantidad"]=1
                 renglon=f"{archivo};{datetime.now()}\n"
